@@ -1,0 +1,27 @@
+17:43:25 **** Incremental Build of configuration Debug for project EX1_Botao_UART ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:40:55: warning: comparison between 'GPIO_PinState' and 'enum <anonymous>' [-Wenum-compare]
+   40 |           if(HAL_GPIO_ReadPin(BOT_GPIO_Port, BOT_Pin) == PRESSIONADO)
+      |                                                       ^~
+../Core/Src/main.c:46:60: warning: comparison between 'GPIO_PinState' and 'enum <anonymous>' [-Wenum-compare]
+   46 |           else if(HAL_GPIO_ReadPin(BOT_GPIO_Port, BOT_Pin) == SOLTO)
+      |                                                            ^~
+arm-none-eabi-gcc -o "EX1_Botao_UART.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\EX1_Botao_UART\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EX1_Botao_UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EX1_Botao_UART.elf
+ 
+arm-none-eabi-size  EX1_Botao_UART.elf 
+arm-none-eabi-objdump -h -S EX1_Botao_UART.elf  > "EX1_Botao_UART.list"
+arm-none-eabi-objcopy  -O ihex EX1_Botao_UART.elf  "EX1_Botao_UART.hex"
+   text	   data	    bss	    dec	    hex	filename
+  21176	    468	   2028	  23672	   5c78	EX1_Botao_UART.elf
+Finished building: default.size.stdout
+ 
+Finished building: EX1_Botao_UART.hex
+ 
+Finished building: EX1_Botao_UART.list
+ 
+
+17:43:26 Build Finished. 0 errors, 2 warnings. (took 1s.448ms)
+

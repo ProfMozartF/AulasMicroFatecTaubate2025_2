@@ -1,0 +1,20 @@
+19:16:14 **** Incremental Build of configuration Debug for project EX3_Botao_UART ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "EX3_Botao_UART.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\EX3_Botao_UART\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EX3_Botao_UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EX3_Botao_UART.elf
+ 
+arm-none-eabi-size  EX3_Botao_UART.elf 
+arm-none-eabi-objdump -h -S EX3_Botao_UART.elf  > "EX3_Botao_UART.list"
+arm-none-eabi-objcopy  -O ihex EX3_Botao_UART.elf  "EX3_Botao_UART.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8976	     92	   2052	  11120	   2b70	EX3_Botao_UART.elf
+Finished building: default.size.stdout
+ 
+Finished building: EX3_Botao_UART.hex
+Finished building: EX3_Botao_UART.list
+ 
+ 
+
+19:16:15 Build Finished. 0 errors, 0 warnings. (took 1s.313ms)
+
