@@ -2,7 +2,11 @@
 <section name="Workbench">
 	<section name="ImportExportAction">
 		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.ExternalProject"/>
+		<item key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID" value="org.eclipse.ui.wizards.export.ZipFile"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
 		</list>
 		<section name="ImportExportWizard.dialogBounds">
@@ -12,5 +16,26 @@
 			<item key="DIALOG_HEIGHT" value="550"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 		</section>
+	</section>
+	<section name="ZipFileExportWizard">
+		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
+		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
+		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\LER_ADC.zip"/>
+		</list>
+		<section name="ZipFileExportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="859"/>
+			<item key="DIALOG_Y_ORIGIN" value="277"/>
+			<item key="DIALOG_WIDTH" value="805"/>
+			<item key="DIALOG_HEIGHT" value="708"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+	<section name="WorkbenchPreferenceDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="405"/>
+		<item key="DIALOG_Y_ORIGIN" value="9"/>
+		<item key="DIALOG_WIDTH" value="1019"/>
+		<item key="DIALOG_HEIGHT" value="1020"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>
