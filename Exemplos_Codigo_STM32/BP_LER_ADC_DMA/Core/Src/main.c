@@ -45,12 +45,23 @@ int main(void)
 	  valorAdc1 = AdcBuffer[0];
 	  valorAdc2 = AdcBuffer[1];
 	  valorAdc3 = AdcBuffer[2];
-		  sprintf(mensagem, "Valor ADC 1 = %d\n", valorAdc1);
+		  /*
+	  	  sprintf(mensagem, "Valor ADC 1 = %d\n", valorAdc1);
 		  HAL_UART_Transmit(&huart1, (uint8_t*)mensagem, strlen(mensagem), 10);
 		  sprintf(mensagem, "Valor ADC 2 = %d\n", valorAdc2);
 		  HAL_UART_Transmit(&huart1, (uint8_t*)mensagem, strlen(mensagem), 10);
 		  sprintf(mensagem, "Valor ADC 3 = %d\n", valorAdc3);
 		  HAL_UART_Transmit(&huart1, (uint8_t*)mensagem, strlen(mensagem), 10);
+		  */
+	 vetorUART[0] = 0x7F;
+	 vetorUART[7] = 0xF7;
+	 vetorUART[1] = (valorAdc1>>8) & 0x00FF;
+	 vetorUART[2] = valorAdc1 & 0x00FF;
+	 vetorUART[3] = (valorAdc2>>8) & 0x00FF;
+	 vetorUART[4] = valorAdc2 & 0x00FF;
+	 vetorUART[5] = (valorAdc3>>8) & 0x00FF;
+	 vetorUART[6] = valorAdc3 & 0x00FF;
+	 HAL_UART_Transmit(&huart1, vetorUART, 8, 10);
 	 HAL_Delay(100);
   }
 

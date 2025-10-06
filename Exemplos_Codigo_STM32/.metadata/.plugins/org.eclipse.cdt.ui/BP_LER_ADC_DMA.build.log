@@ -1,4 +1,4 @@
-17:36:57 **** Incremental Build of configuration Debug for project BP_LER_ADC_DMA ****
+18:16:00 **** Incremental Build of configuration Debug for project BP_LER_ADC_DMA ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
@@ -21,7 +21,7 @@ arm-none-eabi-size  BP_LER_ADC_DMA.elf
 arm-none-eabi-objdump -h -S BP_LER_ADC_DMA.elf  > "BP_LER_ADC_DMA.list"
 arm-none-eabi-objcopy  -O ihex BP_LER_ADC_DMA.elf  "BP_LER_ADC_DMA.hex"
    text	   data	    bss	    dec	    hex	filename
-  25936	    468	   2156	  28560	   6f90	BP_LER_ADC_DMA.elf
+  24952	    468	   2116	  27536	   6b90	BP_LER_ADC_DMA.elf
 Finished building: default.size.stdout
  
 Finished building: BP_LER_ADC_DMA.hex
@@ -29,5 +29,5 @@ Finished building: BP_LER_ADC_DMA.hex
 Finished building: BP_LER_ADC_DMA.list
  
 
-17:36:58 Build Finished. 0 errors, 1 warnings. (took 1s.349ms)
+18:16:02 Build Finished. 0 errors, 1 warnings. (took 1s.417ms)
 
