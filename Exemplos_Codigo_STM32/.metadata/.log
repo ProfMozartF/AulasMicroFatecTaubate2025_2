@@ -459,3 +459,54 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2025-10-04 16:47:15.327
 !MESSAGE Indexed 'BP_LER_ADC_DMA' (19 sources, 80 headers) in 3.88 sec: 3,959 declarations; 18,407 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0089%)
+!SESSION 2025-10-07 19:14:02.977 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-10-07 19:14:05.116
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-07 19:14:10.525
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-07 19:14:10.528
+!MESSAGE Log4j2 initialized with config file C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-07 19:14:25.444
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-10-12 18:42:27.825 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-12 18:42:34.636
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-12 18:42:34.639
+!MESSAGE Log4j2 initialized with config file C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-12 18:42:42.466
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-10-12 18:50:52.101
+!MESSAGE Indexed 'LeituraADC_SensorTemp' (17 sources, 78 headers) in 3.19 sec: 3,647 declarations; 13,278 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.012%)
+!SESSION 2025-10-13 20:03:04.813 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-13 20:03:12.239
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-13 20:03:12.242
+!MESSAGE Log4j2 initialized with config file C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-13 20:03:22.135
+!MESSAGE Started RMI Server, listening on port 41337
