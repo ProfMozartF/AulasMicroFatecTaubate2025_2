@@ -1,20 +1,10 @@
-02:30:26 **** Incremental Build of configuration Debug for project LeituraADC_SensorTemp ****
+20:46:37 **** Incremental Build of configuration Debug for project LeituraADC_SensorTemp ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "LeituraADC_SensorTemp.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\LeituraADC_SensorTemp\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LeituraADC_SensorTemp.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: LeituraADC_SensorTemp.elf
- 
 arm-none-eabi-size  LeituraADC_SensorTemp.elf 
-arm-none-eabi-objdump -h -S LeituraADC_SensorTemp.elf  > "LeituraADC_SensorTemp.list"
-arm-none-eabi-objcopy  -O ihex LeituraADC_SensorTemp.elf  "LeituraADC_SensorTemp.hex"
    text	   data	    bss	    dec	    hex	filename
-  26696	    472	   2096	  29264	   7250	LeituraADC_SensorTemp.elf
+  25616	    472	   2048	  28136	   6de8	LeituraADC_SensorTemp.elf
 Finished building: default.size.stdout
  
-Finished building: LeituraADC_SensorTemp.hex
- 
-Finished building: LeituraADC_SensorTemp.list
- 
 
-02:30:28 Build Finished. 0 errors, 0 warnings. (took 1s.962ms)
+20:46:38 Build Finished. 0 errors, 0 warnings. (took 505ms)
 

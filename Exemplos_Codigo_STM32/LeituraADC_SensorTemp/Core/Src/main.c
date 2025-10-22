@@ -10,6 +10,7 @@ float voltTemp;
 float voltTempFilt;
 float valorTemp;
 char mensagem[50];
+uint8_t vetorUART[4];
 
 // Definição dos coeficientes do filtro IIR
 float alpha = 0.05;  // Fator de suavização (entre 0 e 1), controle da resposta do filtro
@@ -43,7 +44,7 @@ int main(void)
 	  HAL_ADC_Stop(&hadc1); //Desabilita o periférico
 
 	  voltTemp = (float)ValorADC*0.0008056640625;
-	  //voltTemp = voltTemp*1.26;
+	  //voltTemp = voltTemp*1.0;
 	  //voltTempFilt = voltTemp;
 	  voltTempFilt = filtro_IIR(voltTemp);
 
@@ -52,12 +53,13 @@ int main(void)
 			  (58.556*(voltTempFilt*voltTempFilt))-(127.49*voltTempFilt)+122.7;
 
 	  if(valorTemp>30.0){
-		  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, SET);
-	  }
-	  else if(valorTemp<30.0){
 		  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, RESET);
 	  }
+	  else if(valorTemp<30.0){
+		  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, SET);
+	  }
 
+	  /*
 	  sprintf(mensagem, "Valor ADC TempSensor = %d\n", ValorADC);
 	  HAL_UART_Transmit(&huart1, (uint8_t*)mensagem, strlen(mensagem), 10);
 	  sprintf(mensagem, "Volt TempSensor = %.2f\n", voltTempFilt);
@@ -65,6 +67,14 @@ int main(void)
 	  sprintf(mensagem, "TEMPERATURA = %.2f Celsius\n", valorTemp);
 	  HAL_UART_Transmit(&huart1, (uint8_t*)mensagem, strlen(mensagem), 10);
 	  HAL_Delay(100);
+	  */
+		 vetorUART[0] = 0x7F;
+		 vetorUART[3] = 0xF7;
+		 vetorUART[1] = (ValorADC>>8) & 0x00FF;
+		 vetorUART[2] = ValorADC & 0x00FF;
+		 HAL_UART_Transmit(&huart1, vetorUART, 4, 10);
+
+		 HAL_Delay(100);
 
   }
 

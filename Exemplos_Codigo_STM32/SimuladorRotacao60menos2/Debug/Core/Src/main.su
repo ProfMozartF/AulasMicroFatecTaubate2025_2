@@ -1,0 +1,8 @@
+../Core/Src/main.c:37:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:46:5:main	8	static
+../Core/Src/main.c:70:6:updateTimerPeriod	16	static
+../Core/Src/main.c:79:6:SystemClock_Config	88	static
+../Core/Src/main.c:126:13:MX_ADC1_Init	24	static
+../Core/Src/main.c:173:13:MX_TIM1_Init	56	static
+../Core/Src/main.c:226:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:261:6:Error_Handler	4	static,ignoring_inline_asm
