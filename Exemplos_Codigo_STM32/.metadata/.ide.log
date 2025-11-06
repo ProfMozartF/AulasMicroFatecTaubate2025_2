@@ -755,3 +755,24 @@
 2025-11-05 20:59:42,141 [INFO] WebApp:191 - Connection restablished
 2025-11-05 20:59:47,763 [INFO] WebApp:194 - Connection lost
 2025-11-05 20:59:48,044 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:07:22,656 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:07:22,966 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:09:16,760 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:09:17,203 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:10:47,251 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:10:47,887 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:12:17,756 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:12:18,216 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:13:49,252 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:13:49,826 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:15:19,739 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:15:20,695 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:16:50,257 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:16:50,942 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:17:39,180 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-11-05 21:17:58,803 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-11-05 21:18:22,251 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:18:22,754 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:18:27,227 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-11-05 21:19:52,761 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:19:53,521 [INFO] WebApp:191 - Connection restablished
