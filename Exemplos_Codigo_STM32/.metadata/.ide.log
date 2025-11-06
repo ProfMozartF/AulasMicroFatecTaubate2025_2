@@ -776,3 +776,72 @@
 2025-11-05 21:18:27,227 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
 2025-11-05 21:19:52,761 [INFO] WebApp:194 - Connection lost
 2025-11-05 21:19:53,521 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:21:23,257 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:21:23,669 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:21:42,050 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 644004472 Bytes (1073741824)
+2025-11-05 21:21:43,755 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 706392696 Bytes (1073741824)
+2025-11-05 21:21:44,475 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-11-05 21:21:44,477 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-11-05 21:21:44,477 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8F1
+2025-11-05 21:21:44,477 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-11-05 21:21:44,480 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-11-05 21:21:44,483 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-11-05 21:21:44,488 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.1.202504091515\\db\
+2025-11-05 21:21:44,725 [INFO] CodeEngine:263 - oldGeneratedFile, C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\MXTmpFiles\license.tmp_save
+2025-11-05 21:21:45,155 [INFO] CodeEngine:287 - Generated code: C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\MXTmpFiles\license.tmp
+2025-11-05 21:21:45,320 [INFO] CodeEngine:263 - oldGeneratedFile, C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\MXTmpFiles\gpio.tmp_save
+2025-11-05 21:21:45,444 [INFO] CodeEngine:287 - Generated code: C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\MXTmpFiles\gpio.tmp
+2025-11-05 21:21:45,685 [INFO] CodeEngine:263 - oldGeneratedFile, C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\Core\Src\stm32f1xx_it.c_save
+2025-11-05 21:21:45,974 [INFO] CodeEngine:287 - Generated code: C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\Core\Src\stm32f1xx_it.c
+2025-11-05 21:21:45,988 [INFO] CodeEngine:263 - oldGeneratedFile, C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\Core\Inc\stm32f1xx_it.h_save
+2025-11-05 21:21:46,102 [INFO] CodeEngine:287 - Generated code: C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\Core\Inc\stm32f1xx_it.h
+2025-11-05 21:21:46,139 [INFO] CodeEngine:263 - oldGeneratedFile, C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\Core\Src\stm32f1xx_hal_msp.c_save
+2025-11-05 21:21:46,306 [INFO] CodeEngine:287 - Generated code: C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\Core\Src\stm32f1xx_hal_msp.c
+2025-11-05 21:21:46,315 [INFO] CodeEngine:263 - oldGeneratedFile, C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\MXTmpFiles\system.tmp_save
+2025-11-05 21:21:46,391 [INFO] CodeEngine:287 - Generated code: C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\MXTmpFiles\system.tmp
+2025-11-05 21:21:46,408 [INFO] CodeEngine:319 - oldGeneratedFile, C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\Core\Inc\stm32f1xx_hal_conf.h_save
+2025-11-05 21:21:46,498 [INFO] CodeEngine:343 - Generated code: C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\Core\Inc\stm32f1xx_hal_conf.h
+2025-11-05 21:21:46,544 [INFO] ApiDbMcu:508 - Load IP Config File for TIM1
+2025-11-05 21:21:46,551 [INFO] ApiDbMcu:508 - Load IP Config File for USART1
+2025-11-05 21:21:46,553 [WARN] IPConfigManager:3790 - IP not found : TIM
+2025-11-05 21:21:46,554 [WARN] CodeGenerator:4198 - IP not found : null
+2025-11-05 21:21:46,572 [INFO] CodeEngine:263 - oldGeneratedFile, C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\Core\Inc\main.h_save
+2025-11-05 21:21:46,700 [INFO] CodeEngine:287 - Generated code: C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\Core\Inc\main.h
+2025-11-05 21:21:46,716 [INFO] CodeEngine:263 - oldGeneratedFile, C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\Core\Src\main.c_save
+2025-11-05 21:21:46,867 [INFO] CodeEngine:287 - Generated code: C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\Exemplo2_InterrupcaoTimer\Core\Src\main.c
+2025-11-05 21:21:47,526 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 324mS.
+2025-11-05 21:21:47,536 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-11-05 21:21:47,651 [INFO] ConfigFileManager:1590 - The Die is : DIE410
+2025-11-05 21:21:49,454 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 1918mS.
+2025-11-05 21:21:49,455 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-11-05 21:21:49,458 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-11-05 21:22:53,744 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:22:54,757 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:24:26,242 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:24:27,198 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:25:57,752 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:25:58,840 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:27:28,253 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:27:28,904 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:28:53,250 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:28:53,576 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:29:36,935 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:29:38,288 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:29:42,755 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:29:43,047 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:30:08,665 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:30:08,985 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:36:57,257 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:37:05,142 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:38:28,242 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:38:28,990 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:39:58,745 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:40:01,890 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:41:29,250 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:41:29,870 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:42:59,754 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:43:01,917 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:44:31,249 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:44:33,152 [INFO] WebApp:191 - Connection restablished
+2025-11-05 21:46:02,242 [INFO] WebApp:194 - Connection lost
+2025-11-05 21:46:10,150 [INFO] WebApp:191 - Connection restablished
