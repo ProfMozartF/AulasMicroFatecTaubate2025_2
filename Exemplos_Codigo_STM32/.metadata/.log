@@ -872,3 +872,135 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-22 19:04:58.420
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-10-24 20:55:34.781 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-24 20:55:42.147
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-24 20:55:42.150
+!MESSAGE Log4j2 initialized with config file C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-24 20:55:51.528
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-10-26 18:01:52.221 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-26 18:02:00.698
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-26 18:02:00.701
+!MESSAGE Log4j2 initialized with config file C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-26 18:02:10.769
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-10-26 18:04:21.539
+!MESSAGE Indexed 'RodaFonicaVirtual' (20 sources, 81 headers) in 5.6 sec: 5,376 declarations; 34,026 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0051%)
+!SESSION 2025-10-28 19:43:50.851 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-28 19:43:57.740
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-28 19:43:57.743
+!MESSAGE Log4j2 initialized with config file C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-28 19:44:06.941
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-10-28 22:01:55.720 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-28 22:02:02.293
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-28 22:02:02.297
+!MESSAGE Log4j2 initialized with config file C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-28 22:02:09.852
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-10-28 22:02:12.377
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.Workbench$39 RUNNING
+	 at org.glassfish.jaxb.runtime.v2.model.impl.ClassInfoImpl.getProperties(ClassInfoImpl.java:295)
+	 at org.glassfish.jaxb.runtime.v2.model.impl.RuntimeClassInfoImpl.getProperties(RuntimeClassInfoImpl.java:159)
+	 at org.glassfish.jaxb.runtime.v2.model.impl.ModelBuilder.getClassInfo(ModelBuilder.java:219)
+	 at org.glassfish.jaxb.runtime.v2.model.impl.RuntimeModelBuilder.getClassInfo(RuntimeModelBuilder.java:72)
+	 at org.glassfish.jaxb.runtime.v2.model.impl.RuntimeModelBuilder.getClassInfo(RuntimeModelBuilder.java:52)
+	 at org.glassfish.jaxb.runtime.v2.model.impl.ModelBuilder.getClassInfo(ModelBuilder.java:185)
+	 at org.glassfish.jaxb.runtime.v2.model.impl.RuntimeModelBuilder.getClassInfo(RuntimeModelBuilder.java:67)
+	 at org.glassfish.jaxb.runtime.v2.model.impl.RuntimeModelBuilder.getClassInfo(RuntimeModelBuilder.java:52)
+	 at org.glassfish.jaxb.runtime.v2.model.impl.ModelBuilder.getTypeInfo(ModelBuilder.java:332)
+	 at org.glassfish.jaxb.runtime.v2.model.impl.ModelBuilder.getTypeInfo(ModelBuilder.java:347)
+	 at org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl.getTypeInfoSet(JAXBContextImpl.java:415)
+	 at org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:255)
+	 at org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1115)
+	 at org.glassfish.jaxb.runtime.v2.ContextFactory.createContext(ContextFactory.java:144)
+	 at org.glassfish.jaxb.runtime.v2.JAXBContextFactory.createContext(JAXBContextFactory.java:44)
+	 at jakarta.xml.bind.ContextFinder.find(ContextFinder.java:368)
+	 at jakarta.xml.bind.JAXBContext.newInstance(JAXBContext.java:605)
+	 at jakarta.xml.bind.JAXBContext.newInstance(JAXBContext.java:546)
+	 at com.st.microxplorer.mcu.rtos.api.SupportedApi.loadFromStream(SupportedApi.java:101)
+	 at com.st.microxplorer.mcu.rtos.api.SupportedApi.load(SupportedApi.java:75)
+	 at com.st.microxplorer.mcu.rtos.RtosManager.<init>(RtosManager.java:534)
+	 at com.st.microxplorer.mcu.Mcu.getRtosManager(Mcu.java:7526)
+	 at com.st.microxplorer.mcu.Mcu.propertyChange(Mcu.java:1766)
+	 at java.desktop/java.beans.PropertyChangeSupport.fire(PropertyChangeSupport.java:343)
+	 at java.desktop/java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:335)
+	 at com.st.microxplorer.util.MXPropertyChangeSupport.refreshing(MXPropertyChangeSupport.java:72)
+	 at com.st.microxplorer.mcu.Mcu.refreshingMcu(Mcu.java:6081)
+	 at com.st.microxplorer.mxsystem.MxSystem.refreshing(MxSystem.java:921)
+	 at com.st.microxplorer.plugins.pinoutconfig.PinoutConfigView.<init>(PinoutConfigView.java:203)
+	 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	 at com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:352)
+	 at com.st.microxplorer.plugin.PluginManage.PluginSearch(PluginManage.java:224)
+	 at com.st.microxplorer.plugin.PluginManage.PluginDiscovery(PluginManage.java:67)
+	 at com.st.microxplorer.maingui.MainPanel.initialization(MainPanel.java:329)
+	 at com.st.microxplorer.maingui.AppletMainFrameCubeIde.init(AppletMainFrameCubeIde.java:242)
+	 at com.st.stm32cube.common.mx.core.CubeMxInstance.<init>(CubeMxInstance.java:117)
+	 at com.st.stm32cube.common.mx.core.CubeMxInstance.getInstance(CubeMxInstance.java:91)
+	 at com.st.stm32cube.common.mx.userauth.UserAuthAdapter.<init>(UserAuthAdapter.java:25)
+	 at com.st.stm32cube.common.mx.userauth.UserAuthProvider.getUserAuthAdapter(UserAuthProvider.java:16)
+	 at com.st.stm32cube.common.ecosystemintegration.ui.core.MCUEcoSystemIntegrationUiHelper.getUserAuth(MCUEcoSystemIntegrationUiHelper.java:100)
+	 at com.st.stm32cube.ide.mcu.userauth.UserAuthStartup.earlyStartup(UserAuthStartup.java:32)
+	 at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	 at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	 at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	 at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2733)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2025-11-05 20:05:23.425 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-11-05 20:05:31.285
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-11-05 20:05:31.289
+!MESSAGE Log4j2 initialized with config file C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-11-05 20:05:45.698
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-11-05 20:22:46.100
+!MESSAGE Indexed 'Exemplo2_InterrupcaoTimer' (17 sources, 78 headers) in 3.9 sec: 3,647 declarations; 13,278 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.012%)

@@ -1,3 +1,4 @@
+//Usar Ext int pin com config pull down e com borda de subida
 #include "main.h"
 #include "stdio.h"
 #include "string.h"
@@ -23,10 +24,9 @@ uint16_t frequencia;
 uint16_t periodo_ms;
 uint16_t count;
 uint16_t count_anterior;
-uint8_t rxByte;
-uint8_t tempo_ms_raw;
 uint16_t timerPeriod;
-float tempo_ms_calc;
+uint8_t posAngular=0;
+
 
 
 /* Private function prototypes -----------------------------------------------*/
@@ -37,14 +37,6 @@ static void MX_TIM2_Init(void);
 static void MX_USART1_UART_Init(void);
 
 //***************************************************************************************************************************************
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-	if (htim->Instance == TIM1)
-  	  {
-	  HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-  	  }
-}
-//***************************************************************************************************************************************
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	 count = __HAL_TIM_GET_COUNTER(&htim2); // Lê o valor atual do contador --> cada count vale 10us pela confg que usei
@@ -53,20 +45,28 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	  __HAL_TIM_ENABLE(&htim2);           // Reinicia o Timer
 
 
-	 if((count)>(count_anterior*2))
+	 if(count>(uint16_t)count_anterior*2.5)
 	 {
 		 denteRodaFonica = 1;
 		 count_anterior=count;
+		 posAngular=0;
+
 	 }
 	 else
 	 {
 		 denteRodaFonica++;
+		 posAngular= posAngular+6;
+			 if(denteRodaFonica==5)
+			 {
+				 periodo_us = count*10;
+				 HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, ligado);
+			 }
+			 if(denteRodaFonica==7)
+			 {
+				 HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, desligado);
+			 }
 		 count_anterior=count;
-		 periodo_us = count*10;
-		 sprintf(msg, "Dente_Fonica = %d\r\n", denteRodaFonica);
-		 HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
-
-	 }
+		 }
 
 
 	 EXTI->PR = EXTI_PR_PR12;  // Escreve 1 no bit para limpar flag de interrupção
@@ -85,10 +85,9 @@ int main(void)
   MX_USART1_UART_Init();
   __HAL_TIM_ENABLE(&htim1);
   __HAL_TIM_ENABLE(&htim2);
-	HAL_TIM_Base_Start_IT(&htim1);				// Inicializa Interrupção Timer1
+	//HAL_TIM_Base_Start_IT(&htim1);				// Inicializa Interrupção Timer1
 
 
-	timerPeriod = 5000;//inicia o tempo de pulso com 5ms ate receber o primeiro valor via UART
 
   while (1)
   {
@@ -99,11 +98,16 @@ int main(void)
 		  HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
 		  sprintf(msg, "FREQUENCIA = %d\r\n", frequencia);
 		  HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
+		  sprintf(msg, "Dente_Fonica = %d\r\n", denteRodaFonica);
+		  HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);3
+		  sprintf(msg, "POS ANGULAR = %d\r\n", posAngular);
+		  HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
 
 
   }
 
 }//************************** FIM DO MAIN ******************************************
+
 
 void SystemClock_Config(void)
 {
@@ -131,7 +135,7 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
@@ -153,6 +157,7 @@ static void MX_TIM1_Init(void)
   /* USER CODE END TIM1_Init 0 */
 
   TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_SlaveConfigTypeDef sSlaveConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
 
   /* USER CODE BEGIN TIM1_Init 1 */
@@ -161,7 +166,7 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 7199;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 2500;
+  htim1.Init.Period = 999;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -171,6 +176,12 @@ static void MX_TIM1_Init(void)
   }
   sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
   if (HAL_TIM_ConfigClockSource(&htim1, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sSlaveConfig.SlaveMode = TIM_SLAVEMODE_DISABLE;
+  sSlaveConfig.InputTrigger = TIM_TS_ITR0;
+  if (HAL_TIM_SlaveConfigSynchro(&htim1, &sSlaveConfig) != HAL_OK)
   {
     Error_Handler();
   }
@@ -199,13 +210,14 @@ static void MX_TIM2_Init(void)
   /* USER CODE END TIM2_Init 0 */
 
   TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_SlaveConfigTypeDef sSlaveConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
 
   /* USER CODE BEGIN TIM2_Init 1 */
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 719;
+  htim2.Init.Prescaler = 359;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 65535;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -216,6 +228,12 @@ static void MX_TIM2_Init(void)
   }
   sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
   if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sSlaveConfig.SlaveMode = TIM_SLAVEMODE_DISABLE;
+  sSlaveConfig.InputTrigger = TIM_TS_ITR0;
+  if (HAL_TIM_SlaveConfigSynchro(&htim2, &sSlaveConfig) != HAL_OK)
   {
     Error_Handler();
   }
@@ -292,11 +310,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PB12 */
-  GPIO_InitStruct.Pin = GPIO_PIN_12;
+  /*Configure GPIO pin : Int_rotacao_Pin */
+  GPIO_InitStruct.Pin = Int_rotacao_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(Int_rotacao_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
