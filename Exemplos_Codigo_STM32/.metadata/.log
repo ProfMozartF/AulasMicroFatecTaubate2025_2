@@ -1052,3 +1052,18 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\GIT\GIT_AULAS
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-11-11 21:03:09.302
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-11-12 20:07:40.842 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-11-12 20:07:47.691
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-11-12 20:07:47.693
+!MESSAGE Log4j2 initialized with config file C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-11-12 20:07:53.138
+!MESSAGE Started RMI Server, listening on port 41337
