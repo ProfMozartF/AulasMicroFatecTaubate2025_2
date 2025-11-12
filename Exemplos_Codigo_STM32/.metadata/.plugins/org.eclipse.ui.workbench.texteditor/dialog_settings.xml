@@ -3,6 +3,8 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="_HAL_TIM_SET"/>
+		<item value="HAL_TIM_PWM_Start"/>
 		<item value="PeriodElapsedCallback"/>
 	</list>
 </section>
