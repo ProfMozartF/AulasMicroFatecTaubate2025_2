@@ -839,3 +839,43 @@ Finished building: Exemplo1_PWM.hex
  
 Finished building: Exemplo1_PWM.list
  
+20:21:15 **** Build of configuration Debug for project BP_LER_ADC_DMA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:46:29: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   46 |   HAL_ADC_Start_DMA(&hadc1, AdcBuffer, 3);
+      |                             ^~~~~~~~~
+      |                             |
+      |                             uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:274,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:2:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h:928:78: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  928 | HAL_StatusTypeDef       HAL_ADC_Start_DMA(ADC_HandleTypeDef* hadc, uint32_t* pData, uint32_t Length);
+      |                                                                    ~~~~~~~~~~^~~~~
+../Core/Src/main.c:54:10: warning: statement with no effect [-Wunused-value]
+   54 |     for(i==0;i<=4;i++)
+      |         ~^~~
+arm-none-eabi-gcc -o "BP_LER_ADC_DMA.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\GIT\GIT_AULAS_FATEC\Exemplos_Codigo_STM32\BP_LER_ADC_DMA\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BP_LER_ADC_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BP_LER_ADC_DMA.elf
+ 
+arm-none-eabi-size  BP_LER_ADC_DMA.elf 
+arm-none-eabi-objdump -h -S BP_LER_ADC_DMA.elf  > "BP_LER_ADC_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+  26152	    468	   2132	  28752	   7050	BP_LER_ADC_DMA.elf
+arm-none-eabi-objcopy  -O ihex BP_LER_ADC_DMA.elf  "BP_LER_ADC_DMA.hex"
+Finished building: default.size.stdout
+ 
+Finished building: BP_LER_ADC_DMA.list
+ 
+Finished building: BP_LER_ADC_DMA.hex
+ 
+20:22:04 **** Incremental Build of configuration Debug for project BP_LER_ADC_DMA ****
+make -j8 all 
+arm-none-eabi-size  BP_LER_ADC_DMA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26152	    468	   2132	  28752	   7050	BP_LER_ADC_DMA.elf
+Finished building: default.size.stdout
+ 

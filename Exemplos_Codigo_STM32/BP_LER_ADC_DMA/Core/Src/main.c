@@ -3,6 +3,7 @@
 #include "stdio.h"
 #include "string.h"
 
+#define alpha 0.05
 
 
 /* Private variables ---------------------------------------------------------*/
@@ -15,6 +16,11 @@ uint16_t valorAdc1;
 uint16_t valorAdc2;
 uint16_t valorAdc3;
 uint8_t vetorUART[8];
+uint16_t BufferFIR [5]; 
+uint16_t Saida_FIR;
+float Saida_IIR = 0.0;
+float saida_ant = 0.0;
+
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
@@ -43,8 +49,20 @@ int main(void)
   while (1)
   {
 	  valorAdc1 = AdcBuffer[0];
-	  valorAdc2 = AdcBuffer[1];
-	  valorAdc3 = AdcBuffer[2];
+	  //valorAdc2 = AdcBuffer[1];
+    int i;
+    for(i==0;i<=4;i++)
+    {
+     BufferFIR[i]= AdcBuffer[1];
+    }
+    Saida_FIR = (uint16_t)(BufferFIR[4]*0.2+BufferFIR[3]*0.2+BufferFIR[2]*0.2+BufferFIR[1]*0.2+BufferFIR[1]*0.2);
+	  valorAdc2 = Saida_FIR;
+    //valorAdc3 = AdcBuffer[2];
+    Saida_IIR = alpha*(float)AdcBuffer[2]+(1-alpha)*saida_ant;
+    saida_ant = Saida_IIR;
+    valorAdc3 = (uint16_t)(Saida_IIR);
+
+
 		  /*
 	  	  sprintf(mensagem, "Valor ADC 1 = %d\n", valorAdc1);
 		  HAL_UART_Transmit(&huart1, (uint8_t*)mensagem, strlen(mensagem), 10);
