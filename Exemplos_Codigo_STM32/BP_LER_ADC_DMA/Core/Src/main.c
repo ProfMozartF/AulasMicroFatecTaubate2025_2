@@ -28,6 +28,7 @@ static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_USART1_UART_Init(void);
+uint16_t MediaSimples (uint8_t NumDados, uint8_t ADCPorta);
 
 int main(void)
 {
@@ -62,6 +63,12 @@ int main(void)
     saida_ant = Saida_IIR;
     valorAdc3 = (uint16_t)(Saida_IIR);
 
+    uint16_t Val1 = MediaSimples(50, 0);
+    uint16_t Val2 = MediaSimples(50, 1);
+    uint16_t Val3 = MediaSimples(50, 2);
+
+
+
 
 		  /*
 	  	  sprintf(mensagem, "Valor ADC 1 = %d\n", valorAdc1);
@@ -85,6 +92,22 @@ int main(void)
 
 }  /* Fim do Main */
 
+//*************************************************************************
+uint16_t MediaSimples (uint8_t NumDados, uint8_t ADCPorta)
+{
+uint32_t SomaDados=0;
+uint8_t cont = 0;
+	while(cont<NumDados)
+	{
+		SomaDados+=AdcBuffer[ADCPorta];
+		cont++;
+		HAL_Delay(1);
+	}
+	uint16_t MediaLocal = SomaDados/NumDados;
+	return(MediaLocal);
+}
+
+//*************************************************************************
 
 void SystemClock_Config(void)
 {

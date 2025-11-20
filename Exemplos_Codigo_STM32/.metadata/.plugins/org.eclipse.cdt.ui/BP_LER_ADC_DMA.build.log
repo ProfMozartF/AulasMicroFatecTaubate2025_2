@@ -1,10 +1,10 @@
-20:22:04 **** Incremental Build of configuration Debug for project BP_LER_ADC_DMA ****
+22:25:00 **** Incremental Build of configuration Debug for project BP_LER_ADC_DMA ****
 make -j8 all 
 arm-none-eabi-size  BP_LER_ADC_DMA.elf 
    text	   data	    bss	    dec	    hex	filename
-  26152	    468	   2132	  28752	   7050	BP_LER_ADC_DMA.elf
+  26280	    468	   2132	  28880	   70d0	BP_LER_ADC_DMA.elf
 Finished building: default.size.stdout
  
 
-20:22:04 Build Finished. 0 errors, 0 warnings. (took 512ms)
+22:25:00 Build Finished. 0 errors, 0 warnings. (took 462ms)
 
