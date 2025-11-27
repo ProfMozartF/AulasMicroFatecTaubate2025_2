@@ -1,0 +1,10 @@
+22:19:42 **** Incremental Build of configuration Debug for project Pedal_e_Borb ****
+make -j8 all 
+arm-none-eabi-size  Pedal_e_Borb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31520	    468	   2260	  34248	   85c8	Pedal_e_Borb.elf
+Finished building: default.size.stdout
+ 
+
+22:19:43 Build Finished. 0 errors, 0 warnings. (took 432ms)
+
