@@ -160,7 +160,17 @@ int main(void)
 
 	        // Exibe Float Dinâmico
 	        snprintf(bufferTexto, sizeof(bufferTexto), "Volts: %.1f V", voltagem);
-	        SSD1306_SetCursor(0, 30);
+	        SSD1306_SetCursor(0, 9);
+	        SSD1306_WriteString(bufferTexto, White);
+	        SSD1306_SetCursor(0, 18);
+	        SSD1306_WriteString(bufferTexto, White);
+	        SSD1306_SetCursor(0, 27);
+	        SSD1306_WriteString(bufferTexto, White);
+	        SSD1306_SetCursor(0, 36);
+	        SSD1306_WriteString(bufferTexto, White);
+	        SSD1306_SetCursor(0, 45);
+	        SSD1306_WriteString(bufferTexto, White);
+	        SSD1306_SetCursor(0, 54);
 	        SSD1306_WriteString(bufferTexto, White);
 
 	        // Atualiza
